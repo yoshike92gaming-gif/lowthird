@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Subscribe Overlay — Lower Third (Chroma Green)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @font-face {
+    font-family: "Chakra Petch Embedded";
+    font-weight: 700;
+    font-style: normal;
+    src: url(data:font/woff2;base64,d09GMgABAAAAACasAA4AAAAAX/AAACZVAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGngbu1QchHgGYACFJBEICt4gxh8Lg3oAATYCJAOHcAQgBYQsB4Z/GwNRMwPBxgGgAF8+m42oYeMgPBpcHxWlVDPP/usEbgy5PZiaXCUpIVhNG42b9ioti3wXQ8ErLcq5+F3fU8c/jU/XJ5GF5gxsG/mTnLwE9fv1fs/c3ewLECuWACCZFACrVBSxS8XBJ6E+OwI6P/Bu6/3PZ+vGmSJ+B2pOHDNFxY1irlwDcaBCgOLOlAhtWVvtyuaVLdsW1Nm2zuatbljeNk/RxroVFP3Bb2/vXtTMB/0ESRIm0gSCgWaW9vj/j3v4rXPf/zNNUlCQaMBpElAUfcyaiUPMbad//4Hf95tftxpYuQVjfv4jq9+QZOXXItVdJLwJz8moq+j0EUY1Cpg93r+XY3pzM75uN6GALKHc+QpZPdLAGWHpB1SKSa8Xk0EqYmIySHf35gcxhV2ppi1O+NMQyvh3SlTkV6aKzrBzl9oQS7sHFvFwwDNrxKfCZxN8B4LhE61AOlGUw0vOsYyJr4h3DKHLRa9RU7koGpfm+e+XzpJ/aO2hMDbebVHJVQxqJw4UsjQhsZZBle73TZtNKM8P1WKRMQKJRPnLn83uTeaWWhSqdZ3CUqs7hTPIk2gUPHwtnX6h6Tp+cXEgJMph5CX9313GL2X8DqpUiY9QGIHwragYjTGxWquarHKl7RsyXLwACSyNeXx2ffVd6tkjriIXKMuinFWlMIK/A9xtWeUB+grYBJEhhBBEikIKkUKkEOfYXcbmu3kUleZQ7l+SAIYAtIKYRYMCCQXCo5DX1hBmKYSXJIgUuRD5qiBq1ENItEG064C685wdcdc9iEkeMesQzJl/8oteb9gI0EKaPQjTPvhZEPBWpmgA59/VZTXAgAHKv0IRUaoHR2DIvw1USKjbvmUNkAgYg70C1yeuF4SUAAlDPG1CEd5KEEi9Xkmcs40d6hghJUCgQMSLh/BkgMQW4z7fCAKyEPvCTb0ECdTfTEA5ZnYa0oteeoWxwduxQ5YwwAwCSpvh6heKEK9hvGard+8BaD3Xkb/odoF41B4R9uBz2bNd27L1U69rrad2ijWseuUrXA5wOkp28xa5kHEsbs+5jjVbYAY14tVRMJTwb991sbMI/K3P+nSuzfqkk72Nx+llqE2IDfhR9FxP9kj3H+/j1t3d0f6WBDyOLnv3VdXONlfWuoqO5THhCC1tfrOa1kTiGBSBgqhv9bF61LnMWp+wE1CzU1sDAokA6N/Av5rfi4cz/uJPflsD9JH3LO3e9KrgMXqGVnfcww476DY3ornGbttt8kubby0W0mKozedkrhnyjZdrmAF66yaunZYFtJ3gFkytLvJ/PuRV5vJHptvt+cG/gd7keKLP13kAorV49Zr/F4jwvJGiAJyI8+oMUJ98Wjq92XbCZaCxGB3zZ28biBcglDAMv+pcLJV+3LmtJ17eHhE/G7+4q3KPO+LNvGsp4FQualfPfa2nrLwXV1rudO/ZudD83mCabmSa1VqgPRvnsfQY/IWJu8yjI+xYsLGLDQTvJp4ol9sSrwavPPRan9ipQfyCgyvB4fB4cdxRy6pOPMRnrDAmTlyqvVKKONs4JwnSlClbFbfQNPVIilPUqCIg/Wj959YUCYSUCOB6czzT93uDaeoB+/pGd0pQuUD8PfLgn5Rq4VHBw5MY1UUlQ0Yye5ych8xkmZa1l4w2cxmx/TYqbOoxM4tdJdJaAdzEyVT2TCR8p1TSduT/FxMhiC8PzpismUFimTq7A0RzWSNSTFg8N5dLmDtrquvTxuS7nc8t0AfiYjnAXiLL98praP87rN0v5Rf/xQgaE2AgH2UWGktQmJ+wAIlymwSFlm1+DC/31bSSiV+5Fly4ebIZZdyWt9VHA5qe3IBU+3arAqaseTWgkiEXKaJ72aKY7631W8U+LUzivimSF/HSf0knIYwN2+eIE0457azzLrhozGVaOlehWDB0VIaMerFSMsZM0rjwZMyHjPkRhpNE+AtmIoRIQslUWKdk4SKgIsWhS5DEUArBKOkgA8t/NpQnn5FipRjKVBdSA2IQk6E6YqgnC5KkGSkFc01EoNyiaNYKaYMSd7WjBlA0wyCyfUR0hChOENUpIjlNBGeTmPPGIHSEuhqhszWDo6P6pMVjiglKNUiXKUAl/ynGDVKzxF2DgrrG83AhiarhcyMGd1TZBjwVRbSWd1a7ETivA1CcN1mcgJboVePKyTU6CTVzoIqh62wjsa5s7pGZZa7azdXf1aQWnm7g9fZQU3/PJ4qbEgyt3k4G/KyZ4hLD+vJ67HWf7qCZs+3ihLa8mzhHTb2l1DYFAliZzZ6AzaQjSwNXUKPvRm7KoltBpGSQajLfpsgumB4z4x6JVCEHD3xJB8JC0dT06HYhylql63Drzapyy23FdJgL7XHsoapRUX47UUVKBObKRJfni6HgtoVi9SwX+eTqCsrfF68FuOmWQCh3EYUwYcKYCROmUHbICCgTZhlClNLJTDxiI6gsYmFYYLBlwZYFW5asJmuNEiPDAJ11DGUULVQBzRK5jPm6iH3TSEgzUte8HomHIM4XIj4YweeI7E9UGVIEmWUor4wUBCU+I1xVwVRjHlGjFkYcAn0kZBRUxmhMUEMniIi4RvyimRsYaBx74cHA3k5WLBS9UV66V47UxXrZFQcm8/GETCiuo/NBBhVS6hoNuCsIFlT/En68XXBqObl952uDsFgoAi9gq4G8w/HHI0jsGjknisrFTr3cDUHBo8XNeGscjoQ44BV+ja0jI3fBvQMVoNS+uWpunwN6KFKO0T0YXrE0g0nZxQhxNP1wo9aLMSo9H0IMxFTYhY/yTgDRx3ulnlZWZY1yUk//c5DFnKA6EnS4NbTi6hgC1nlxIXgn/Ln9FDfdPKTsEm4R5rJs1osWjY/xfG2cJJscFt12C/RAJPqgtQWQLa9T9NSS473sOrbFh+OZmQpl4QnDynybIeKN0WLbwzYAb25IKIKvnStG5IzNOhzVneu2SR9HjEO9zS4w5TMbmVf7VAlq8Fb3kxd2prqdKkebNdnr0lhThveLC9JfJgzGCujDEYMLL9Z8LOMIFQBDZ86QEWS9S0DYQiBQBBhjRBZIGMhMUENdnBuUYWUGX/XsMVExUTEtYcCQGSM2DOPwA2qiWO3LVE+5UpUjdTnTFEtvORkua/vK0om4bAWsJjs6FM2VortaNF+EvnpfpkPQ+UMZQ/Bt5A30qAkCSDVEpBU43DhBmT7vUlDR0PWJGQNOhn5ZIQwY9krCdGbJk9u14vHHXPiGcLvjvrLQIN20HYfmQnS5kIPRnr8CYhsM3pnxxKTr+gzhRXFM438NmLDE4sgVmxt3HpbywhEiTJx4ifhSpRFIt1ypajWkGim1/UTfPejIoqgwNEo0iJAkIk5MCIWnxoSmIBR7++ILkxtqeDHebYRmhaeIDFKoOYNkKaNoztC5blvEwpCQUVDR0PsYKSwtQlRwIVqMWDxxEiUnfk6qNIKDw3H7Eg5mRKjbxHBKSBmhOA8PIMjPYSWsgM8wTCXKVRCqJFJ1dbi4fUHdGaEbK6YhdEFLtGpQ6w3QOglLkSnLMdTrw8acplBzzC6MlCs2N+48LI2oS8FV0WLE4onrcxSJMZIFX6o0glSeUEGokkhVWpkjI6fY35jWUkbrY+b4i1ZARkFFQx+SpSiKoigAAACggkTJ+FKlEZTMnPw4bynp0pCxshUyJaeIxpJSi9ZoT5sOduzbv8icSEOeDxljxAJICDJRUNHQFwuJhGVF5CgLhluzj0P4WxIJVhRmZtj7bDdhjBeFztAeVuSSOS02sRnMFZZBszRfjKgr/a+4KW7Nb0SpP7jRKE8p8y09tIiwYjD1JCQxZML745irwkiZzRjWuISf9Ce+8Z8RUSwviNRIoCQpykjHKpDeMACC0wkUBUGrDAZQdjBgDE8oAtiejoIg/TEIfwryCNVgFCAgJSLwICgDITWI7S0FRWf5tVDlrzWKFlGmc7dw2G5bmNqty6fyBdTmu3T1ntQLkT60L6Evd0VWl9FToKI11GVtniZGL/oF0O0aIcShTLDqTE9+peVOFpoITfjaIOjq10YQoIV2s//PZYU7h78UkRgIQpj6nsXi8V3AZ2H9EKSyWObmE9FNE4ZWXARUhp4CH0th/TMQZEbrvuqlUP1LVlYB5fFIeaupKoPCYyQVdZDDGmiWwKK/FzQLLv+SSRbB6L8SlMlrkgYBKVrpUYcd+6JYCiGFl40YEBi1Tc1RBkg6fn2hdqhMCER6yeoViJJFcmPHBJy/F8EJmgvvKUYZIfnM06FEVVl2YO09MDhbZmh2F+BBe5emO23zbgii1U+kxxprkYDkjIYAWkXezRkQoD4fwXqlti/VtpoejbUK4akQgUE9NVtjXxcHHMLsreJ/zSnSmyeTB8sIdRBBXjAXMDetN1bCmQdAk7Dnhndg6rcUlmEw4DNh+n8S1D406IkgWwHiZ3VAGxTMtE4IEB7LfjLJ80Tw0bbmI1Sncz41+SVTnbf9wZ+KEDACleD0ZLBsWUwWznJl+bPCWDzWwxt33Hxvfcxwi0//4NlZfIUZdmHTDLV+IFQEyjRzljXLbt85rNBvZMofsAhAiQD8PxKLw3P/zYP/Xv/wIAAf/pvunD4z3TudMc18Pv486XnisyvPxgABGAcsNj0KQFzOIIGPSxyuuJht/H+vHHLTcXd9b8otp4w65oF9zht2wn4HfO2Jr3zuJxgDhoyZsmTFmg0mByw4Jy68+PDlh8NfiFBhwi1z1knnPHXJB5HiJUiSIt1yGTLlKVCoWIkyNcTq1JOQatREqVmb0/5wxrduO+yOL02Y9Kfn3pvWadx3LvjZR7/6xhZbvfHMUW9ttso1g3YacgQFEQkNGRWdEQtmzDHYs7WEHRPO3LliW8rNIx6CBQgUJIK3BjGicPFEixUnkWCb/ZfOlS3HCslKVSpXoYrQYyIKK8nItajVylO1F2bMeuWqL1ymc4UWAin/HgD/AuJPwP+gxTtAm31AbTSQxwAkAFn0IxABAoFCIS80Tr9rTo06eJxqn8rluq9Ub/NCd4oitAr1Z50el0VO2GtXeZGNnssQHuA0KPjaJWgYSzWrP08V8gGjlCgAvREKh5Cgk9HRqom0/SgC5mmeamVbVr50s2qsBxCBn1n38tG7ywdByUJkZFlHmlvBbMpG1ZGrzU/LnUbxaQwiWgI7lgTYljCW6lTAYDfRuZ2+XVGeaBvUNI7wm503e5F1jUo3u7mBIzCK37AbfRZGEKwP2gBIXdfBkHGWHrZNvMy+ZYKgl2xWnElcMiGd9pNLvjAP4TUj7dkxJOgUH8MBb1dP2fFPkDE5K/T+n+ljJhqHHdtPqFAeiWTpZ1dxng2iZZSIJsLKYSFz4mJ0Snjme4RZ2zKs1JlKK3t5YD7SFZYUvSt3KM7EbPQcIVh5tsnWDJ/m7IyiWWWahEISm9409LXHSgINORuhVNcG9xqqTHNmTdLHNhdFo3NRaD4p0U7bLXccRyrkaCsdTbDFRC9UNHFJ5apTsI18mn2cyZI+2c0a/62H4U5/nZPz27rJneiyDKd3JRWO+cFxKKA4OKXvHk6hqMw5unhhySzbsNNo6CtQEgMLoeipTiAAc3YTbS0ScKrBTOtD9ZSrYE4vNF/pJsjwY2XsiBmT++QIuS27nUYPPprsAV8ffxvog5RyFeeocMXFVSYcgUaY4BjdJc0bv8JMp5UpnaxOLKLkbDTiVP0xjctQc6bQ4Fpsprt+XcPMM591UMgvJ7ovnRH3oCoUH8zEaz7TaSabjvxiyY0FOvPYJj2KkfklfnaUdgZId0AyrwocQcHAd7n4XMX4HhWz06VRTDruvd8RZrffFdjLQmdo+JsGdvpqHcEpQUMAqymu1pgI6WAPXKMWZhnOfgHIV0MzeKrnEdOYQ/0yfurQ/Nfc/lXPnU00XRR7bN4swrPFmR1w2kDtczFVaZdxHWB2Yw2x17D5jJ9ZsV42586lKFyR82PKVCYqxOikNOU+vLUabj+twMQEDK05vcGKTt4kZ4o0rCHCBErOymoaJRDVB4Axp0pGT0W0UoslosjKwGQrV3mVGQP1kjSqghbVqX+LVl29bLrDWwBe5h+mTt7C7arseNynIS2V8ygLCrPexDWXIanUfsWkFntk8qqeEu5vuYKVZ6UMGhRE+MNaNFOSnaNonmXAh0hZqknQZ4Fdz4Eum7U+u6tOe4u0gbWsEhKatmPB38sE/u7htsGgQNG6HUlw1gk5ozGM8WHB38sKDYxdFYgCMuUpr2WUxVyKa2ZWpydxO6JjPh34bBEPSeX8JXOoH3aLtFVoS+3bi6KlTaQbTNYbt6B0ncuaTSA6hzWMunVr+JXIwDN0oJu00dZbch8Yk5pHG5Qi35mCT/k4XnS8mhdI02d6YKFP6EXugMt89QqMoptizUzMLYpywBc2METMaMmF+Nuc0014V2DfKjDP8dKCUn3XVSiPjVdxhaKTAf/lfNRv+qek1LXrCPrdEXbWr4ijfegVkmcKlHbspYpCI15FSyNOLPlEpsnjVMcebQyDU8s7bhlWgDQpgGgHlMJBYwdF3hV0CRU4qjnPlAyhL9fao1/hivgLyOvcCwyDUAsXym/nmF4PfIUBq1BYXUO0VIai0wBDrGbHB+rkePx9Z3IqL/Dc5RWOcYJ3UGKeF7raLVkxZa6BQylV4DPddoGABUxYD6ImgloXicHs+q0RKSE6MdPg9a4zMXY6ORr0b0lxE6uQjOWESOeJ8roLl808ddqzNhFaCrooUNppSH7Hb7ygYTlrTUGwWlveWpaqAA47lIaYanl3qmdKrCqeJXc6+3eX9bSCHrEx9BEuOqYzNW3ME9oPq1Lw4V5XOCLnv+kPfCCWqrH2vkRsR2P3MY1S0OcSK2nN7HkLlocxvesw2b9r7JOXLEvjSiosa9qqqlq9ScDBP2Fl5yuZeFT6Rd6dgYmB0sAC9wLAtO2ftH0hg+/Cp7JvkFZIRbdU8I87nqRIGhU16c8+Sj2zMURb1jTPcnTsYAFXe7Gi4mZzfMJFsfiBdId/HT5/luA8Uj6CjUGQ7FuZLEcqFWtC9RN4Az6hD9WIt5fPgZnn06ex5nGAaa7/yeQmra22wsGGp5AJZQNXO65UTmpyvF1uzbz92kjsywDnmqYafNz4cOE+Odg0OPoWPzTS33LZ6eyV2edk8r/l+Ivy6ush8hCGxoOGQvQg+xHU71DYmpck/8goGhc3F41O4+TmpIE47fxAYN7crcrC1/xvo0lQKMjkurVHnAcmC6eKd1/Eayzw3p5ULP8jPpbOhzfQRzc6dT0j6HBC1t4EdKSnkt0a/AP6Y4/u3vU9+kOP6Vi17Gw6BECesgNK6/zfcpQO9aUdk7cXChP1/2GmZaKn+DI365qppzio4o4XKApGm5uecj+Fy+ZHaSOeNn3ynYqEfH8cteK34jpvvaa5BD+Iv5xV/vR1kFKj0yh9bLe5df2Ew0BwZub6dcYyH3qSkqTJo4GiP2c0d8NjfjAwB12sFX8dy8vmGZorXuAnFqrD4aGpAqhi8aXARORWqiPgNlS9vSq36ut58DzxsdxD/jhJA1wlT2OB38QtNDylMhmo2vUnbFB4rf+gVYG1tjdrHuubF60dxeFR9PZrV/X9hW34axV8qH6RMfDZ7z5o4EXOa+HA5+/qDMAH+w+fbT/MRNXYLiMyNYCLRT+iRTKo6x9VlYwGngWygoL/ovQ7ntl1h9aKEdkIqJUJSfFXz1Um8Bx1IxwNGN2Pgi16piq6pgblRkdHzxewj/5Pdva7OvFYTsFX4bAZenZdc17dXC6Ei4tV9om8C6IqXJ6L9deSnJs55Xl5m3PAr9JVWGkmqipU+eH9+CTn+qkKt5c3g3Ve01qFNXhOnlAoCn76nuXt/XTVvfZUPl93SpKe0R0b0ZpzMwf+jglK2iAWuwVmxvvxjbzVhYGeaRk+6zaWTnnncpYv1J7qtLhufAt+Ege/SmdRlU1V1RUhd/HAM9vu6PIKh//dwsx2m4VBdXe+JL9CKByrX6WNGpIM9KjA/qVQXGtcWMBTMZ2GzDbwuLqwCm7Gx/Koxy0/t/r0DAi/q3Lh8/c2NPSoSsxyiktwFQTlcafip5j/QvVKBXEvp9pn/XPb5Xioqqy29hRwqxY2GDR4b1rReWHLoYVTyJZ197K+VAE3r3tPBeEvWzPSl3fG8vwDn6wVq1UlZlm81K6yxYj8AldKV2ZGxj7DbJZcTDGm6Oyaqscf4XvYDm/O9mY5jD/rk0oWsE8OZuo3KI4/68N/ddz3aBUOS+5Hwe4K7zT4VBJ9SMNPeZ14LOoihE+FQ6mVHjDYmZSYeJ3ude0NVcWLxSfxlYL01rT4+lW4pTKdG4V3xn+tMWA8QK04X5Ubm1vcb7bHbNIsAy9IkLFRKi+tYKoAL1vWbZezP2dp1XdFxfXFJVjpW+O2HDazMtsMuBkikWGo25yRx8jml5QcKivT/bzKid0uIr6oUClITuZnFHG1Q1pvFVRX2udLCvd3798l3fXSpEl6HoKqe1WlpulWD5bqVWt2dtYBeNUrz8fg1Xv1ZReYv1SHhGJ5oc0Zg2dkqLrrZVuBACsTtEFT/c570PZL/557s716c+72s+/G/gZG/WggFWwx25GUdKh8RllRWO4A1pUMJkp/dkH0d6CFeBy8Vd1XunPwSeZL88uEQl3Dam1ENAjU+eNa/lbp1lZG8qqtBvwgLy7+mMuUcMBc5pKerl2+nF7u09Ctzoyykk8tmQL8+LXU1LsBjFd/sZPSKddf6Q9B8q/l8k6G661c2669wA8OTnnsSO04XVav04Drrqr4BNgPCRqpWGwnFu8qD6dVyd4ALm7QxME5WPlpQjHx6YWTEKdpeDe1XXXEr8l74A0FqzN6g0YP3M5WZHdriC852AMnI/AUyzRJcAb2wPLqOYWoi1xXtyAWe0KQ+De7OLyRQk0oPoofOvKjWPyzWMx5JcfX4RsTkytwKI+kFivmuqzD+8FPfFXPO+Pbdoanv6pOzIchXHRFZLNLbFyK3/SCcHGexhsfwfdppsTi3zuGw/z2RXC7J+NyV+Ln8E04yNeWeMtaYoQHO+Hgs+OsqaQpt/Y0geALgUB8oRu7VF4C9glR7bb3s6bcRxpzG4+5TgmmbNujJvDTJtTrRfzUB/A887Hoyj+b//av9o/ppB9YixZ2UgBPiG5fMpUxxZn6djFfOO22Mz29JTV1Er7bi92tzS89EdsHeFLJj605KSlPklNyar8sGd3PBpEpl6lcbVY0POU+JcwCP22/VqP1oZU7kjQUOZQEVZYjy1NIGaoNWZMGbGGkJqEloiXBzexkDrjXh1uEP2kUXqBaozYWV1vviRjhjbALRl6O5OHsuzX5kacND0PPnvDCe/Sh6vKWlo8dHZ3nTy1X0bZ6J+puZ8t18HED+2XZA9ED1oNNlJgA57gchxxHl44JpAuyg/iQMt4xxwEF1APPvRarWmUb7U+ohEpMSihrrs+1O6oSKiFRwv9KSkcCq7UabQdd7yZ9eC7t0KpV62V8bZKWL1sPRopcrEhDNohpH1MF3FDvQ03NNlmu6UJiMuXHWTTNlW07JmXs4pgFsUk/EPNxJMDMfSky1TWVjHJESfsfAnZoqazU8F4yr1+zV7YXaL9If4GewLEddnhNUd5aB8ync/8dv9BVQgrn6cPGaR6wj56Z/7YMj96S4n/CPndWeJJMIzPeXP3T18tvaGpI/7kTx9YmIf8nr83+Bj/1K9I18HSEn5aK1NQTvRhpRcPAIP2Tk6b6XXq1rhYEnFv19aIGWUOd+I9Hyu9i7QmpzWnpX48nAi5Hq3846gNVoN8GXhc9TcH2T2RH2F3h3STE+X3plslE+cL8MNgN/GpVrJQt3ZKywrNIWjTW0fGnRJKj8uHJ8c3z0vnwhEwLGExcXT7kPYTOFZoVQ9n81c9kf0PS8Fin6QmlQH84ule1d1Rq6gM76jfpbyAg9/QsX86KcMOTzUHKSCUiT9wtiaNrK+IZtJNw1RvYqzt2kzq2dTtMyxxmgD3jwtPdW3Got7sb6Aeko/2q/lHJDKoG/f09H+gJZtoc2S2srhGuLjXUhWXPClQuRdKfMRVQtO2/3unbFkDaHNAH7KFHAsHJADzimETTqdWEnspuzw7jsJiS9oS8omUgDB2SF7UPqbyD0T71TnQCu1ysCcu3AP7eyYiLaSwuPlNS0mrqXUz3md6h0bzcsuVWf/9noh/u3HG6e7fyxo3fGxq6M17g3Mm6qSAt+NVefYbcrhUbVNckq1gLgwsK5NuYrpgYGfdcrZhHlSN9L6EWgCxzV668ptkPNUq6k6a5GwgfiZpBaVnZLLzi1M6iZlFg273i4rVCpTyz/jpPt4hClXferl1KUbRyL0uAPR42Pq4YP03zKnt6ZgK1xGhR+0ckkjFoaIiotddUT3oPjWNtVH3DZWC3P29peSFA6Ql+XNwJ0KN4NymmAwNJ6qFQnoeTeyRP0ahdovX3h97c8orwioq/mz4WNqYPIRlDiiLpOQJXwY5SEM5JgW0pTUtrB6AzK2vE+74YsrXqZb82XUZ/+JXyATNPU9uqcfs31F3q79Sw4djHdKTzqWGi2BUhK2LPsZ9EtHFDSkqkJl7DgbBvYl3KEQUYD6h8YMB47YbhVdxkUghaBW3Cch6vAYyLn6x0VXrqQPAosvzSsQQSdnKyXltp8dL00cHRrVm1WRCalxtjp3XVsqt4MTHqUJiTHOzWCMWzjdtu/wXb691a7LTiD+0KsLuj5ZhGaBnERWHGy7ePZBd3PcLnCAbAgIb5xXKvItQLZ4VzwgW8aJvqVfMg1AtmJbAprM155/VBqBfO4jmW5T+6LJi2UxxsEXapLoZQL5wVzuFF1l84L9QLZ5vmVm2Hh7DLUCSpsDkOCPXC2b3PzW/ZBeBFO0Wvmk1CvXAWz7FZe5+nEeqFs3jOKpzmLS30hUpQRb2poWz43EmoF84K5/CiLVWodoFQL5iVwDpVN0+CRuysu6EPxKOI1+H1eCO7ycHt+IO+dfMn8AvYe3ZgR7Ygip3NzABbPsAJd+UModVr1QvesFGv2Nb3lDgG2OeH0b95dgK44ysAy4RtrziFfTZ++xduszYasTMMDBypftCNw/tJZvJym9tHZlQ5D4Ghzg85BDJ+iEA0sLf4WyZRg0ey+K39C/zXp+m3iJRHxtQPD7LqR/NPgMM1cwl8B8CxjwB1kMe7FXhdrRYb/pZXE43GKsDrQi1Ix4MYDO6WjPmtgFsGManoVoBXQ5qGqvPvq5pgdFohvK5Wi03pEh/EB9FBDQjIAUVemzahd/G1GqcwkWDA6+CgHgrwtZZTkIdiDBTuFo25rYD7CmKC735yXkTRzmPvESF2dy3cB/dh+5TZqG5IpGOqCL5WdYp7imgBCQ5j1ry6YtgIl1bERGuRE1qHjFHNDDdQbcd78Fd4Mn6AT+NP8SfsCT/kXXYET7q9clyLjbNjXLb7NiwCwHHbH7Gx9L+R7D3lzr25N/XC7wUCBBj09dGGkqsRfxQyYQbgjb+l38hT/8+h/vf5vdqlPQdBhgIEmDvM+Kjh890FgLhb07+ZSj4g2iX7K89AXG11BcibRN8mghMyujq/QMviWJEQlxxsM5e7xiAe3C2hsrtyPBi3DsQPTLjvcZx4l/ZDR3D0/kjkhbUStQIDyAEN7oBziRinrjI9UB+0SoLNrYeYrUByRC3C6aLwgrd+yeUScd5wgPJRzS4kdK4fY5c7g4iZEIyGeO4W0evUzzlcHrngdpoE0RvDjp4iIi59lzjIKsV5RrqmEXAy4Wwg/pnWON0morcH4xQQDI/9D+RbMM4EYi5PNbj2CpurtRv9CIjjOO1Y5NbXUCeJXEmB0NiXMul1DfbnTgNidsI5OZw5w9hGbHYK5oYxjoM4rSMibZldtdXJFGyeAdyePfS9mHJPDbrPnOBeDAhdmJEYPaa6muHmu3tbzYyILY+DjeyOzBdMEXf3d6ABZPctYznRfuNogSlGkpuiXDJqQ6Oogyyspb8Avua6S4npIj6z0Gy/cBjid1soDFF6J4kYvIwUXna6VUOEcw3jbF6DWwFXGjIAktj+FQWsSGGUjPyYzb5HHN8F+J7YzO2Ac8MgeIriiVdkwnyr5fxNPtdGCkSP6Am2l3xA6SO6QdNIoE40g8bQFI25NjL/MZ8VS3YQ49iEmUWGkQMSATC3FksI8K9YZFGI7p5aBQWaiBAgNSqAZ2ZUzEBYe0fQNtbPIAgyNgOD2zGDKEbWDBKWAGL0dMBmCu+XCuPjlqsgU5MSxcp7k5O6+EFIyFTxIRCPL1a1MmIyZdJVUqhQzUsMiTpCOSrJwlYn0YDFjzffe384FgURPUmjEsmT1LSJwqXcNHmdP4i7ejXrdCyrXO+ei8WTgiU8KlVOnDaJ7VNSLcNPVamOiefwJSFKsvSiVWIFQlEqI1GrUsUVjR4grZ46Kr/SptqWn6aq1DidRuW81ZGo50MSoE4FP5VJ2VW1F9negZ3uUHeHWW5xvLX/gkhAETi7645yJ1Q4qZ8LV0JsL7ipNOGeL5eZemBPk+574CEv3nxGmIKnJsLxyGNVvrLZKaP8zc+d6g4W4mvfvOxv57gtjvCXZXhz0/78azWoNyxOPIkEsxJJycitlCRZCr7vKDRRapQ6DNIIRoR0yzXL0KJNu1b7dDgtk16WbDl6rZCrU5fVVsmTr0ChOZcVGXfNZ/Ywx2Axp7Ayn+1PZCSEjFAQKkJD6IgBYogYIcaISUzReRNmMeetd8GIRSxjhSlj9piOwRyA2++GtQyRmIlCZ6BYqUhcJrPmjLNi3HTLueU5+KNG/hu+QEQLG1SuIIcta+zYEowsWDSGxZGDrcocFI0SdrHHCZWG2jp91usZMw6UmBkrjsHjFOe4xDXsuMU9HlnKBs88FboRYuEHmILvsbRsPh/jCyUKcmNDjS/HPxirK3VzfEP8BHOwPw7AgTh4TMi2vr4xoZijhtjBvg3B8/0C/ak3gCppqFyjYqzaYK2FSjFTThfVNFGDtTWqx4pmIprHUV9sF7ryjfSnlFwmk0mUjVIqwfoHLdK6IC3S5hCVQSZiYsHGbOrvG7JiMPWfJUkmp76cWlZxBjLVbnPkBqKpipo64VVegGG1RCLelCJYOg2EEsU6FKEE) format("woff2");
+  }
+  :root { color-scheme: dark; --key: #00ff00; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #14161c; color: #e8ebf5;
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+
+  /* Preview shell */
+  .shell { display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 100%; gap: 14px; padding: 18px; }
+  .stage { position: relative; width: min(100%, calc((100vh - 110px) * var(--aspect)));
+    aspect-ratio: var(--aspect); background: var(--key); overflow: hidden;
+    outline: 1px solid #2a2e3a; }
+  .stage svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .controls { display: flex; gap: 12px; align-items: center; width: min(100%, 960px); }
+  .controls button { background: #232838; color: #fff; border: 1px solid #3a4157; border-radius: 999px;
+    padding: 8px 18px; font: inherit; font-weight: 600; cursor: pointer; }
+  .controls button:hover { background: #2e3550; }
+  .controls button:focus-visible, .controls input:focus-visible { outline: 2px solid #ff5a6a; outline-offset: 2px; }
+  .controls input[type=range] { flex: 1; accent-color: #ff2d3f; }
+  .controls label { display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+  .time { font-variant-numeric: tabular-nums; min-width: 92px; text-align: right; }
+
+  /* Export mode: bare 1920x1080 stage, no UI */
+  body.export { background: var(--key); overflow: hidden; }
+  body.export .shell { display: block; padding: 0; min-height: 0; }
+  body.export .stage { position: fixed; left: 0; top: 0; width: 1920px; height: 1080px;
+    aspect-ratio: auto; outline: none; }
+  body.export .controls { display: none; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="stage" id="stage">
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" aria-label="Subscribe button overlay">
+      <defs>
+        <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2D3449"/><stop offset=".5" stop-color="#181C2A"/><stop offset="1" stop-color="#0B0E16"/>
+        </linearGradient>
+        <linearGradient id="floodG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FF4A5E"/><stop offset=".55" stop-color="#E41B31"/><stop offset="1" stop-color="#9C081C"/>
+        </linearGradient>
+        <linearGradient id="neonG" id2="" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="500" y2="0">
+          <stop offset="0" stop-color="#FF2D3F"/><stop offset=".55" stop-color="#FF4F9A"/><stop offset="1" stop-color="#8C6BFF"/>
+        </linearGradient>
+        <linearGradient id="bevelG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity=".0"/>
+        </linearGradient>
+        <linearGradient id="glossG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".30"/><stop offset="1" stop-color="#fff" stop-opacity=".02"/>
+        </linearGradient>
+        <radialGradient id="badgeG" cx=".4" cy=".28" r=".85">
+          <stop offset="0" stop-color="#FF7482"/><stop offset=".55" stop-color="#E0162B"/><stop offset="1" stop-color="#8A0617"/>
+        </radialGradient>
+        <radialGradient id="badgeWhiteG" cx=".4" cy=".28" r=".9">
+          <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#CBD2E8"/>
+        </radialGradient>
+        <linearGradient id="sweepG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="streakG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#FF2D3F" stop-opacity="0"/><stop offset=".7" stop-color="#FF6A8E" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="textG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D5DAEC"/>
+        </linearGradient>
+        <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(32)">
+          <rect width="2" height="9" fill="#fff" opacity=".045"/>
+        </pattern>
+        <filter id="glow" x="-25%" y="-90%" width="150%" height="280%" color-interpolation-filters="sRGB">
+          <feGaussianBlur stdDeviation="9"/>
+        </filter>
+        <filter id="softShadow" x="-20%" y="-60%" width="140%" height="260%">
+          <feGaussianBlur stdDeviation="13"/>
+        </filter>
+        <filter id="tinyShadow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="2.2"/>
+        </filter>
+      </defs>
+
+      <!-- Overlay root, positioned from CONFIG in JS -->
+      <g id="root">
+        <clipPath id="revealClip"><rect id="revealRect" x="-90" y="-120" width="0" height="420"/></clipPath>
+
+        <g id="reveal" clip-path="url(#revealClip)">
+          <g id="exitSlide">
+            <g id="pulseG">
+
+              <!-- depth + shadow -->
+              <rect id="shadowRect" class="pw" x="6" y="30" height="112" rx="56" fill="#000" opacity=".5" filter="url(#softShadow)"/>
+              <rect id="extrude" class="pw" x="0" y="10" height="112" rx="56" fill="#07080D"/>
+              <rect id="extrudeEdge" class="pw" x="0" y="10" height="112" rx="56" fill="none" stroke="#5A0A16" stroke-width="2" opacity=".8"/>
+
+              <!-- neon glow (behind body) -->
+              <rect id="neonGlow" class="pw" x="0" y="0" height="112" rx="56" fill="none" stroke="url(#neonG)" stroke-width="7" filter="url(#glow)" opacity=".55"/>
+
+              <g id="pill">
+                <clipPath id="pillClip"><rect id="pillClipRect" class="pw" x="0" y="0" height="112" rx="56"/></clipPath>
+
+                <rect class="pw" x="0" y="0" height="112" rx="56" fill="url(#bodyG)"/>
+                <g clip-path="url(#pillClip)">
+                  <rect class="pw" x="0" y="0" height="112" fill="url(#hatch)"/>
+                  <!-- press flood -->
+                  <circle id="flood" cx="290" cy="56" r="0" fill="url(#floodG)"/>
+                  <circle id="floodEdge" cx="290" cy="56" r="0" fill="none" stroke="#fff" stroke-width="3" opacity="0"/>
+                  <!-- gloss -->
+                  <path id="gloss" fill="url(#glossG)" opacity=".7"/>
+                  <!-- ripple -->
+                  <circle id="ripple" cx="290" cy="56" r="0" fill="none" stroke="#fff" stroke-width="3" opacity="0"/>
+                  <!-- light sweep -->
+                  <rect id="sweep" x="-200" y="-20" width="130" height="150" fill="url(#sweepG)" opacity="0" transform="skewX(-24)"/>
+                  <!-- HUD chevrons -->
+                  <g id="chev" transform="skewX(-24)" fill="#fff">
+                    <rect x="0" y="40" width="7" height="32" rx="1.5"/>
+                    <rect x="15" y="40" width="7" height="32" rx="1.5"/>
+                    <rect x="30" y="40" width="7" height="32" rx="1.5"/>
+                  </g>
+                </g>
+                <!-- bevel + neon edge -->
+                <rect class="pwIn" x="1.5" y="1.5" height="109" rx="54.5" fill="none" stroke="url(#bevelG)" stroke-width="2"/>
+                <rect id="neonEdge" class="pw" x="0" y="0" height="112" rx="56" fill="none" stroke="url(#neonG)" stroke-width="3.5"/>
+              </g>
+
+              <!-- play badge -->
+              <g id="badge" transform="translate(56 56)">
+                <circle r="42" cy="7" fill="#000" opacity=".55" filter="url(#tinyShadow)"/>
+                <circle id="badgeBase" r="40" fill="url(#badgeG)"/>
+                <circle id="badgeWhite" r="40" fill="url(#badgeWhiteG)" opacity="0"/>
+                <circle r="39" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+                <path d="M-30 -14 C-20 -34 20 -38 32 -14 C16 -26 -16 -26 -30 -14 Z" fill="#fff" opacity=".28"/>
+                <path id="playTri" d="M-9 -15 L17 0 L-9 15 Z" fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+              </g>
+
+              <!-- letters -->
+              <clipPath id="textClip"><rect id="textClipRect" x="0" y="20" width="600" height="72"/></clipPath>
+              <g clip-path="url(#textClip)"><g id="letters"></g></g>
+
+              <!-- bell button -->
+              <g id="bell">
+                <circle id="bellShadowC" r="56" cy="12" fill="#000" opacity=".5" filter="url(#tinyShadow)"/>
+                <circle r="56" cy="9" fill="#07080D"/>
+                <circle id="bellGlow" r="56" fill="none" stroke="url(#neonG)" stroke-width="6" filter="url(#glow)" opacity=".5"/>
+                <circle r="56" fill="url(#bodyG)"/>
+                <circle id="bellFlood" r="56" fill="url(#floodG)" opacity="0"/>
+                <path d="M-46 -20 C-34 -50 34 -50 46 -20 C26 -40 -26 -40 -46 -20 Z" fill="#fff" opacity=".16"/>
+                <circle r="54.5" fill="none" stroke="url(#bevelG)" stroke-width="2"/>
+                <circle id="bellEdge" r="56" fill="none" stroke="url(#neonG)" stroke-width="3.5"/>
+                <!-- ring waves -->
+                <g id="waveL" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity="0">
+                  <path d="M-30 -22 C-38 -14 -38 -2 -30 6"/><path d="M-40 -30 C-52 -18 -52 4 -40 16"/>
+                </g>
+                <g id="waveR" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" opacity="0">
+                  <path d="M30 -22 C38 -14 38 -2 30 6"/><path d="M40 -30 C52 -18 52 4 40 16"/>
+                </g>
+                <g id="bellIcon">
+                  <g id="bellSwing" transform="translate(0 -2)">
+                    <g transform="scale(1.22) translate(-24 -22)">
+                      <path d="M24 6c-1.7 0-3 1.3-3 3v1.3C15.800 11.600 13 16 13 21.500V29l-3.500 4.500v2h29v-2L35 29v-7.500C35 16 32.200 11.600 27 10.300V9c0-1.700-1.300-3-3-3z" fill="#fff"/>
+                      <path id="clapper" d="M20 38a4 4 0 0 0 8 0z" fill="#fff"/>
+                    </g>
+                  </g>
+                </g>
+                <g id="dot" transform="translate(30 -30) scale(0)">
+                  <circle r="17" fill="#0B0E16"/>
+                  <circle r="13" fill="#FF2D3F"/>
+                  <circle r="13" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5"/>
+                  <rect x="-2.2" y="-7" width="4.4" height="9" rx="2.2" fill="#fff"/>
+                  <circle cy="6.2" r="2.4" fill="#fff"/>
+                </g>
+              </g>
+
+              <!-- entrance streak -->
+              <rect id="streak" x="-300" y="108" width="280" height="4" rx="2" fill="url(#streakG)" opacity="0"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- cursor (outside reveal clip, above everything) -->
+        <g id="cursor" opacity="0">
+          <g id="cursorScale">
+            <path d="M3 5 L3 41 L13 32 L20 47 L28 43.500 L21 29 L35 29 Z" fill="#000" opacity=".5" filter="url(#tinyShadow)" transform="translate(3 4)"/>
+            <path d="M0 0 L0 36 L10 27 L17 42 L25 38.500 L18 24 L32 24 Z" fill="#fff" stroke="#0B0E16" stroke-width="3" stroke-linejoin="round"/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="controls">
+    <button id="btnReplay" type="button">Replay</button>
+    <button id="btnPlay" type="button">Pause</button>
+    <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Timeline scrubber">
+    <label><input id="loop" type="checkbox"> Loop</label>
+    <span class="time" id="timeRead">0.00 / 6.00 s</span>
+  </div>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  /* ───────────── CONFIG ───────────── */
+  const CONFIG = {
+    duration: 6,            // seconds. Timeline below is authored for 6 s and scales to this value.
+    aspect: 16 / 9,         // 16:9 -> viewBox 1920x1080
+    safe: 0.05,             // safe-area margin (fraction of width/height)
+    anchor: { left: 0.058, bottom: 0.139 }, // lower-third anchor (fraction of W / H) for pill bottom-left
+    fontSize: 46,
+    letterSpacing: 5,
+    fps: 60
+  };
+  const BASE = 6;           // authored duration
+
+  /* ───────────── Timeline (authored seconds) ───────────── */
+  const TL = {
+    enter:   [0.15, 0.85],  // plate slides + mask reveal
+    streak:  [0.12, 0.70],  // neon streak along base edge
+    badge:   [0.55, 1.00],  // play badge pops
+    letters: [0.75, 0.035, 0.45], // start, stagger, per-letter duration
+    sweep1:  [1.45, 1.95],  // first light sweep
+    cursor:  [1.75, 2.55],  // cursor travel (fade in 1.75-1.95)
+    hover:   [2.35, 2.55],  // edge intensifies
+    press:   [2.60, 2.72],  // press down
+    release: [2.72, 3.15],  // spring back
+    flood:   [2.72, 3.20],  // red fill from click
+    badgeInv:[2.75, 3.05],  // badge inverts
+    cursorOut:[3.00, 3.40],
+    bellIn:  [3.05, 3.45],
+    ring:    [3.40, 4.30],
+    sweep2:  [3.85, 4.35],
+    pulse:   [4.30, 4.85],
+    exitBell:[5.30, 5.55],
+    exitPill:[5.45, 5.92],
+    end:      5.95
+  };
+
+  /* ───────────── Easing ───────────── */
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const seg = (t, a, b) => clamp((t - a) / (b - a));
+  const lerp = (a, b, p) => a + (b - a) * p;
+  const E = {
+    outCubic: p => 1 - Math.pow(1 - p, 3),
+    outExpo:  p => p >= 1 ? 1 : 1 - Math.pow(2, -10 * p),
+    inCubic:  p => p * p * p,
+    inOutCubic: p => p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2,
+    inOutSine: p => -(Math.cos(Math.PI * p) - 1) / 2,
+    outBack:  (p, s = 1.5) => { const c3 = s + 1; return 1 + c3 * Math.pow(p - 1, 3) + s * Math.pow(p - 1, 2); }
+  };
+
+  /* ───────────── Setup ───────────── */
+  const $ = id => document.getElementById(id);
+  const params = new URLSearchParams(location.search);
+  const exportMode = params.has("export");
+  if (exportMode) document.body.classList.add("export");
+
+  const W = 1920, H = Math.round(W / CONFIG.aspect);
+  const svg = $("svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  document.documentElement.style.setProperty("--aspect", String(CONFIG.aspect));
+  const stage = $("stage");
+  if (exportMode) { stage.style.width = W + "px"; stage.style.height = H + "px"; }
+
+  const root = $("root");
+  const PH = 112;                       // pill height
+  const originX = Math.round(W * CONFIG.anchor.left);
+  const originY = Math.round(H - H * CONFIG.anchor.bottom - PH);
+  root.setAttribute("transform", `translate(${originX} ${originY})`);
+
+  const TEXT = "SUBSCRIBE";
+  const TEXT_X = 124;
+  let PW = 480, TOTAL_W = 620, letters = [];
+  const BELL_D = 112, BELL_GAP = 20;
+
+  function build() {
+    // measure glyph advances with the embedded font
+    const probe = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    probe.setAttribute("font-family", "'Chakra Petch Embedded', 'Chakra Petch', sans-serif");
+    probe.setAttribute("font-weight", "700");
+    probe.setAttribute("font-size", CONFIG.fontSize);
+    probe.style.visibility = "hidden";
+    svg.appendChild(probe);
+    const adv = [...TEXT].map(ch => { probe.textContent = ch; return probe.getComputedTextLength(); });
+    svg.removeChild(probe);
+
+    let x = TEXT_X; const xs = [];
+    adv.forEach(a => { xs.push(x); x += a + CONFIG.letterSpacing; });
+    const textW = x - TEXT_X - CONFIG.letterSpacing;
+    PW = Math.round(TEXT_X + textW + 104);
+    TOTAL_W = PW + BELL_GAP + BELL_D;
+
+    // letters (shadow + face)
+    const g = $("letters"); g.textContent = "";
+    [...TEXT].forEach((ch, i) => {
+      const lg = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      const mk = (fill, dx, dy) => {
+        const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        t.setAttribute("x", xs[i] + dx); t.setAttribute("y", 72 + dy);
+        t.setAttribute("font-family", "'Chakra Petch Embedded', 'Chakra Petch', sans-serif");
+        t.setAttribute("font-weight", "700"); t.setAttribute("font-size", CONFIG.fontSize);
+        t.setAttribute("fill", fill); t.textContent = ch; return t;
+      };
+      lg.appendChild(mk("#05060B", 0, 3.5));
+      lg.appendChild(mk("url(#textG)", 0, 0));
+      g.appendChild(lg); letters.push(lg);
+    });
+    $("textClipRect").setAttribute("x", TEXT_X - 10);
+    $("textClipRect").setAttribute("width", textW + 30);
+
+    // widths
+    document.querySelectorAll(".pw").forEach(el => el.setAttribute("width", PW));
+    document.querySelectorAll(".pwIn").forEach(el => el.setAttribute("width", PW - 3));
+    $("neonG") && $("neonG").setAttribute("x2", TOTAL_W);
+    $("chev").setAttribute("transform", `translate(${PW - 40} 0) skewX(-24)`);
+    $("gloss").setAttribute("d", `M0 0 H${PW} V50 C${PW * .72} 62 ${PW * .3} 62 0 50 Z`);
+    $("bell").dataset.cx = PW + BELL_GAP + BELL_D / 2;
+  }
+
+  /* ───────────── Render (pure function of time) ───────────── */
+  const CLICK = () => ({ x: TEXT_X + 175, y: 58 });
+  const CURSOR_START = () => ({ x: PW + 150, y: 178 });
+
+  function bez(p0, p1, p2, p3, t) {
+    const u = 1 - t;
+    return {
+      x: u*u*u*p0.x + 3*u*u*t*p1.x + 3*u*t*t*p2.x + t*t*t*p3.x,
+      y: u*u*u*p0.y + 3*u*u*t*p1.y + 3*u*t*t*p2.y + t*t*t*p3.y
+    };
+  }
+
+  const el = {};
+  ["reveal","revealRect","exitSlide","pulseG","pill","flood","floodEdge","ripple","sweep","chev","neonEdge","neonGlow",
+   "badge","badgeWhite","playTri","bell","bellGlow","bellFlood","bellEdge","bellSwing","waveL","waveR","dot","streak",
+   "cursor","cursorScale","shadowRect","extrude","extrudeEdge","root"].forEach(k => el[k] = $(k));
+
+  function render(tReal) {
+    const t = clamp(tReal, 0, CONFIG.duration) * (BASE / CONFIG.duration);   // authored time
+    const click = CLICK();
+
+    // global visibility at the very end → zero residue
+    const visible = t < TL.end && t >= TL.enter[0] - 0.02;
+    el.root.style.display = visible ? "" : "none";
+    if (!visible) return;
+
+    /* Entrance */
+    const pe = seg(t, ...TL.enter);
+    const slideIn = (1 - E.outExpo(pe)) * -110;
+    const wipeIn = E.outCubic(seg(t, TL.enter[0], TL.enter[1] - 0.05));
+    /* Exit */
+    const pxp = seg(t, ...TL.exitPill);
+    const slideOut = E.inCubic(pxp) * -90;
+    const wipeOut = 1 - E.inCubic(pxp);
+    const reveal = Math.min(wipeIn, wipeOut);
+    el.revealRect.setAttribute("width", (TOTAL_W + 200) * reveal);
+    el.exitSlide.setAttribute("transform", `translate(${slideIn + slideOut} 0)`);
+
+    /* Neon streak */
+    const ps = seg(t, ...TL.streak);
+    el.streak.setAttribute("x", lerp(-80, PW - 120, E.inOutCubic(ps)));
+    el.streak.setAttribute("opacity", Math.sin(Math.PI * ps) * 0.95);
+
+    /* Press / release / pulse scale on pill group (about pill centre) */
+    let s = 1;
+    const down = seg(t, ...TL.press);
+    if (t < TL.release[0]) s = 1 - 0.035 * E.outCubic(down);
+    else { const u = t - TL.release[0]; s = 1 - 0.035 * Math.exp(-7 * u) * Math.cos(13 * u); }
+    const pulseP = seg(t, ...TL.pulse);
+    const pulse = Math.sin(Math.PI * pulseP);
+    s *= 1 + 0.012 * pulse;
+    const cx = PW / 2, cy = PH / 2;
+    el.pulseG.setAttribute("transform", `translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`);
+
+    /* Neon intensity: hover → press → pulse */
+    const hover = E.outCubic(seg(t, ...TL.hover));
+    const glowBase = 0.5 + 0.22 * hover + 0.25 * pulse;
+    el.neonGlow.setAttribute("opacity", glowBase);
+    el.neonEdge.setAttribute("stroke-width", 3.5 + 1.3 * hover + 0.8 * pulse);
+
+    /* Badge */
+    const pb = seg(t, ...TL.badge);
+    const bs = pb <= 0 ? 0 : lerp(0.45, 1, E.outBack(pb, 1.3));
+    const inv = E.inOutSine(seg(t, ...TL.badgeInv));
+    const react = t > TL.badgeInv[0] ? 1 + 0.10 * Math.exp(-9 * (t - TL.badgeInv[0])) * Math.sin(16 * (t - TL.badgeInv[0])) : 1;
+    el.badge.setAttribute("transform", `translate(56 56) scale(${bs * react})`);
+    el.badge.setAttribute("opacity", clamp(pb * 3));
+    el.badgeWhite.setAttribute("opacity", inv);
+    el.playTri.setAttribute("fill", mix("#FFFFFF", "#E0162B", inv));
+    el.playTri.setAttribute("stroke", mix("#FFFFFF", "#E0162B", inv));
+
+    /* Letters */
+    const [l0, st, ld] = TL.letters;
+    letters.forEach((lg, i) => {
+      const p = seg(t, l0 + i * st, l0 + i * st + ld);
+      const e = E.outCubic(p);
+      lg.setAttribute("transform", `translate(0 ${(1 - e) * 46})`);
+      lg.setAttribute("opacity", clamp(p * 4));
+    });
+
+    /* Light sweeps */
+    const sw = (a, b) => {
+      const p = seg(t, a, b);
+      return { x: lerp(-260, PW + 120, E.inOutSine(p)), o: Math.sin(Math.PI * p) };
+    };
+    const s1 = sw(...TL.sweep1), s2 = sw(...TL.sweep2);
+    const sv = s1.o > 0 ? s1 : s2;
+    el.sweep.setAttribute("x", sv.x); el.sweep.setAttribute("opacity", sv.o * 0.9);
+
+    /* Chevrons flicker */
+    const ch = el.chev.children;
+    for (let i = 0; i < 3; i++) {
+      const base = 0.30;
+      const hit = t > TL.sweep2[0] && t < TL.sweep2[1] + 0.2 ? Math.max(0, Math.sin(Math.PI * seg(t, TL.sweep2[0] + i * 0.08, TL.sweep2[0] + i * 0.08 + 0.3))) : 0;
+      ch[i].setAttribute("opacity", base + 0.6 * hit + 0.5 * (t > TL.flood[0] ? 1 : 0) * 0.5);
+      ch[i].setAttribute("fill", t > TL.flood[0] ? "#fff" : "#FF4A5E");
+    }
+
+    /* Flood + ripple */
+    const pf = E.outCubic(seg(t, ...TL.flood));
+    el.flood.setAttribute("cx", click.x); el.flood.setAttribute("cy", click.y);
+    el.flood.setAttribute("r", pf * 640);
+    el.floodEdge.setAttribute("cx", click.x); el.floodEdge.setAttribute("cy", click.y);
+    el.floodEdge.setAttribute("r", pf * 640);
+    el.floodEdge.setAttribute("opacity", pf > 0 && pf < 1 ? 0.6 * (1 - pf) : 0);
+    const pr = seg(t, TL.press[1], TL.press[1] + 0.5);
+    el.ripple.setAttribute("cx", click.x); el.ripple.setAttribute("cy", click.y);
+    el.ripple.setAttribute("r", E.outCubic(pr) * 120);
+    el.ripple.setAttribute("opacity", pr > 0 && pr < 1 ? 0.7 * (1 - pr) : 0);
+
+    /* Cursor */
+    const pc = seg(t, ...TL.cursor);
+    const start = CURSOR_START();
+    const p0 = start, p3 = click;
+    const p1 = { x: start.x + 40, y: start.y - 20 };
+    const p2 = { x: click.x + 150, y: click.y + 70 };
+    const pos = bez(p0, p1, p2, p3, E.inOutCubic(pc));
+    const out = seg(t, ...TL.cursorOut);
+    const drift = E.inCubic(out);
+    const cfade = clamp(seg(t, TL.cursor[0], TL.cursor[0] + 0.2)) * (1 - E.inOutSine(out));
+    const cscale = 1 - 0.14 * E.outCubic(down) + (t >= TL.release[0] ? 0.14 * E.outCubic(seg(t, TL.release[0], TL.release[0] + 0.2)) : 0);
+    el.cursor.setAttribute("transform", `translate(${pos.x + drift * 40} ${pos.y + drift * 46})`);
+    el.cursor.setAttribute("opacity", cfade);
+    el.cursorScale.setAttribute("transform", `scale(${cscale})`);
+
+    /* Bell button */
+    const pbell = seg(t, ...TL.bellIn);
+    const pbx = seg(t, ...TL.exitBell);
+    const bellOpen = Math.min(E.outBack(pbell, 1.2), 1) * (pbell > 0 ? 1 : 0);
+    const bellPresence = pbell <= 0 ? 0 : (pbx > 0 ? 1 - E.inCubic(pbx) : E.outBack(pbell, 1.25));
+    const finalX = PW + BELL_GAP + BELL_D / 2;
+    const startX = PW - 20;
+    const bx = pbx > 0 ? lerp(finalX, startX, E.inCubic(pbx)) : lerp(startX, finalX, E.outCubic(pbell));
+    el.bell.setAttribute("transform", `translate(${bx} 56) scale(${Math.max(0.001, bellPresence)})`);
+    el.bell.setAttribute("opacity", pbell <= 0 ? 0 : clamp(pbell * 3) * (1 - 0 * pbx));
+    const bf = E.inOutSine(seg(t, TL.ring[0], TL.ring[0] + 0.2));
+    el.bellFlood.setAttribute("opacity", bf);
+    el.bellGlow.setAttribute("opacity", 0.5 + 0.3 * bf + 0.25 * pulse);
+    el.bellEdge.setAttribute("stroke-width", 3.5 + 0.8 * pulse);
+
+    /* Ring */
+    const u = t - TL.ring[0];
+    let ang = 0, wave = 0;
+    if (u > 0 && u < TL.ring[1] - TL.ring[0]) {
+      ang = 24 * Math.exp(-3.4 * u) * Math.sin(2 * Math.PI * 4.4 * u);
+      wave = Math.exp(-4.2 * u) * (0.55 + 0.45 * Math.abs(Math.sin(2 * Math.PI * 4.4 * u)));
+    }
+    el.bellSwing.setAttribute("transform", `translate(0 -2) rotate(${ang} 0 -22)`);
+    const wo = u > 0 ? Math.min(1, wave * 1.8) : 0;
+    el.waveL.setAttribute("opacity", wo); el.waveR.setAttribute("opacity", wo);
+    el.waveL.setAttribute("transform", `translate(${-4 * (1 - wo)} 0)`);
+    el.waveR.setAttribute("transform", `translate(${4 * (1 - wo)} 0)`);
+
+    /* Notification dot */
+    const pd = seg(t, TL.ring[0] + 0.05, TL.ring[0] + 0.40);
+    const ds = pd <= 0 ? 0 : E.outBack(pd, 2.2);
+    el.dot.setAttribute("transform", `translate(30 -30) scale(${Math.max(0.001, ds)})`);
+  }
+
+  function mix(a, b, p) {
+    const pa = parseInt(a.slice(1), 16), pb = parseInt(b.slice(1), 16);
+    const r = Math.round(lerp(pa >> 16, pb >> 16, p));
+    const g = Math.round(lerp((pa >> 8) & 255, (pb >> 8) & 255, p));
+    const bl = Math.round(lerp(pa & 255, pb & 255, p));
+    return `rgb(${r},${g},${bl})`;
+  }
+
+  /* ───────────── Player ───────────── */
+  let t0 = 0, playing = true, cur = 0, raf = 0, loop = false;
+  const scrub = $("scrub"), read = $("timeRead");
+  function setTime(t) {
+    cur = clamp(t, 0, CONFIG.duration);
+    render(cur);
+    scrub.value = Math.round(cur / CONFIG.duration * 1000);
+    read.textContent = `${cur.toFixed(2)} / ${CONFIG.duration.toFixed(2)} s`;
+  }
+  function tick(now) {
+    if (!playing) return;
+    const t = (now - t0) / 1000;
+    if (t >= CONFIG.duration) {
+      if (loop) { t0 = now; setTime(0); raf = requestAnimationFrame(tick); return; }
+      setTime(CONFIG.duration); playing = false; $("btnPlay").textContent = "Play"; return;
+    }
+    setTime(t); raf = requestAnimationFrame(tick);
+  }
+  function play(from = cur) {
+    cancelAnimationFrame(raf);
+    if (from >= CONFIG.duration) from = 0;
+    playing = true; $("btnPlay").textContent = "Pause";
+    t0 = performance.now() - from * 1000; raf = requestAnimationFrame(tick);
+  }
+  function pause() { playing = false; cancelAnimationFrame(raf); $("btnPlay").textContent = "Play"; }
+
+  $("btnReplay").addEventListener("click", () => play(0));
+  $("btnPlay").addEventListener("click", () => playing ? pause() : play(cur));
+  $("loop").addEventListener("change", e => loop = e.target.checked);
+  scrub.addEventListener("input", () => { pause(); setTime(scrub.value / 1000 * CONFIG.duration); });
+  window.addEventListener("keydown", e => {
+    if (e.code === "Space") { e.preventDefault(); playing ? pause() : play(cur); }
+    if (e.key === "r" || e.key === "R") play(0);
+  });
+
+  /* Hooks for deterministic frame capture */
+  window.__setTime = t => { setTime(t); };
+  window.__config = CONFIG;
+
+  const ready = (document.fonts && document.fonts.load)
+    ? document.fonts.load(`700 ${CONFIG.fontSize}px "Chakra Petch Embedded"`, TEXT).catch(() => {})
+    : Promise.resolve();
+  ready.then(() => {
+    build();
+    setTime(0);
+    window.__ready = true;
+    if (!exportMode) play(0);
+  });
+})();
+</script>
+</body>
+</html>
